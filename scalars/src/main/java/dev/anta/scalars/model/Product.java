@@ -12,10 +12,11 @@ public class Product {
     private Integer id;
     private String title;
 
-    public Product(Integer id, String title) {
-        this.id = id;
+    public Product(String title) {
         this.title = title;
     }
+
+    public Product () {}
 
     @Override
     public String toString() {
