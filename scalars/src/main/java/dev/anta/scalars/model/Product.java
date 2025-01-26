@@ -11,9 +11,14 @@ public class Product {
     @GeneratedValue
     private Integer id;
     private String title;
+    private Boolean isOnSale;
+    private Float weight;
 
-    public Product(String title) {
+
+    public Product(String title, Boolean isOnSale, Float weight) {
         this.title = title;
+        this.isOnSale = isOnSale;
+        this.weight = weight;
     }
 
     public Product () {}
@@ -21,8 +26,9 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
+                "title='" + title + '\'' +
+                ", isOnSale=" + isOnSale +
+                ", weight=" + weight +
                 '}';
     }
 
@@ -41,5 +47,23 @@ public class Product {
     public void setTitle(String title) {
         this.title = title;
     }
+
+
+    public Boolean getOnSale() {
+        return isOnSale;
+    }
+
+    public void setOnSale(Boolean onSale) {
+        isOnSale = onSale;
+    }
+
+    public Float getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Float weight) {
+        this.weight = weight;
+    }
+
 
 }

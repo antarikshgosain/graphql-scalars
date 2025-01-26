@@ -1,0 +1,10 @@
+type Product {
+    id: ID!
+    title: String
+    isOnSale: Boolean
+    weight: Float
+}
+
+type Query {
+    allProducts: [Product]
+}

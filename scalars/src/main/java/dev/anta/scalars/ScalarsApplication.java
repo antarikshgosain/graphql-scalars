@@ -19,9 +19,9 @@ public class ScalarsApplication {
 	@Bean
 	CommandLineRunner commandLineRunner(ProductRepository repository) {
 		return args -> {
-			List<Product> products = List.of(new Product("Hammer"),
-					new Product("Screw driver"),
-					new Product("Wires"));
+			List<Product> products = List.of(new Product("Hammer", true, 10.1F),
+					new Product("Screw driver", false, 5.5F),
+					new Product("Wires", true, 8.2F));
 			repository.saveAll(products);
 
 			repository.findAll().forEach(System.out::println);
